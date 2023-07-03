@@ -87,7 +87,22 @@
 </div>
 
 
+<script>
+    let links = document.querySelectorAll('.menu ul li a');
 
+    links.forEach((link,i) => {
+        link.addEventListener('click', function(e){
+            e.preventDefault
+
+    let selector = this.getAttribute ("href");
+    let selectorElement = document.querySelectorAll(selector);
+    window.scroll ({
+        top: selectorElement[0].offsetTop,
+        behavior: "smooth"
+    });
+    });
+    });
+</script>
 
 
 
