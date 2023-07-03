@@ -88,20 +88,26 @@
 
 
 <script>
-    let links = document.querySelectorAll('.menu ul li a');
 
-    links.forEach((link,i) => {
-        link.addEventListener('click', function(e){
-            e.preventDefault
+let links = document.querySelectorAll('.menu li a');
 
-    let selector = this.getAttribute ("href");
+links.forEach((link,i) => {
+    link.addEventListener('click', function(e){
+    e.preventDefault();
+
+    let selector = this.getAttribute("href");
+    console.log(selector); 
+
     let selectorElement = document.querySelectorAll(selector);
+    console.log(selectorElement[0].offsetTop); 
+
     window.scroll ({
         top: selectorElement[0].offsetTop,
         behavior: "smooth"
     });
+
     });
-    });
+});
 </script>
 
 
